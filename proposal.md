@@ -95,7 +95,7 @@ conditionalExpression:
 ifNullExpression (‘ ?’ expressionWithoutCascade ‘:’ expressionWithoutCascade)?
 ;
 ```
-**Rest of section 16.20 is unchanged*
+**Rest of section 16.20 is unchanged**
 
 
 #### 16.xx If-**null** Expression
@@ -107,7 +107,7 @@ ifNullExpression:
   logicalOrExpression ‘??’ logicalOrExpression
 ```
 
-An if-null expression of the form *e1??e2* is equivalent to the expression *e1 == null? e2: e*.
+An if-null expression of the form *e1??e2* is equivalent to the expression *e1 == null? e2: e1*.
 
 
 
