@@ -39,7 +39,7 @@ https://code.google.com/p/dart/issues/detail?id=41
 
 * There might be demand for extensions. For example, compound null-aware assignment, e.g.,  `a?+= x`. These are not supported. The fact that they are not supported is not, in my view, a weakness of the proposal. The weakness is that it gives rise to such temptations.
 
-* Allows for 'elvis closurization' as in `a?.m` where *m* is a method, not because this is desired, but because it is not easily distinguished from other cases. In some sense this runs counter to the desire to clean up closurization as described in the generalized tera offs proposal.  I'd rather not introduce things like `a?#m`.
+* Allows for 'elvis closurization' as in `a?.m` where *m* is a method, not because this is desired, but because it is not easily distinguished from other cases. In some sense this runs counter to the desire to clean up closurization as described in the [generalized tear offs proposa]:https://github.com/gbracha/generalizedTearOffs.  I'd rather not introduce things like `a?#m`.
 
 
 ##Examples
