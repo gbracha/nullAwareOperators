@@ -41,6 +41,8 @@ https://code.google.com/p/dart/issues/detail?id=41
 
 * Allows for 'elvis closurization' as in `a?.m` where *m* is a method, not because this is desired, but because it is not easily distinguished from other cases. In some sense this runs counter to the desire to clean up closurization as described in the [generalized tear offs proposal](https://github.com/gbracha/generalizedTearOffs).  I'd rather not introduce things like `a?#m`.
 
+* Does not support operators.
+
 
 ##Examples
 
