@@ -65,6 +65,9 @@ See above. The proposal is strictly limited to the above syntactic transforms.
 
 ### Language specification changes
 
+
+
+
 #### 16.19 Assignment
 
 An assignment changes the value associated with a mutable variable or property.
@@ -80,6 +83,36 @@ A conditional assignment of the form *v ?= e* is equivalent to the expression
 `v = v == ` **null** `? ` **null**  `:` *e*
 
 **Rest of section 16.19 is unchanged** 
+
+** ?? can either replace unaryExpression or logicalOrExpression. Assuming the latter.**
+
+#### 16.20 Conditional
+
+A conditional expression evaluates one of two expressions based on a boolean condition.
+conditionalExpression:
+
+```
+ifNullExpression (‘ ?’ expressionWithoutCascade ‘:’ expressionWithoutCascade)?
+;
+```
+**Rest of section 16.20 is unchanged*
+
+
+#### 16.xx If-**null** Expression
+
+An *if-null* expression evaluates an expression and if the result is **null**, evaluates another.
+
+```
+ifNullExpression:
+  logicalOrExpression ‘??’ logicalOrExpression
+```
+
+An if-null expression of the form *e1??e2* is equivalent to the expression *e1 == null? e2: e*.
+
+
+
+
+
 
 ### A working implementation
 
