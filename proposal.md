@@ -76,10 +76,10 @@ assignmentOperator:
 compoundAssignmentOperator
 ;
 ```
-A conditional assignment of the form *v = e* is equivalent to the expression 
+A conditional assignment of the form *v ?= e* is equivalent to the expression 
 `v = v == ` **null** `? ` **null**  `:` *e*
 
-**Rest of section 16.19 is unchanged ** 
+**Rest of section 16.19 is unchanged** 
 
 ### A working implementation
 
