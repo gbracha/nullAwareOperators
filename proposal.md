@@ -109,10 +109,33 @@ ifNullExpression:
 
 An if-null expression of the form *e1??e2* is equivalent to the expression *e1 == null? e2: e1*.
 
+#### 16.31 Assignable Expressions
 
+Assignable expressions are expressions that can appear on the left hand side of an assignment. This section describes how to evaluate these expressions when they do not constitute the complete left hand side of an assignment.
 
+*Of course, if assignable expressions always appeared as the left hand side, one would have no need for their value, and the rules for evaluating them would be unnecessary. However, assignable expressions can be subexpressions of other expressions and therefore must be evaluated.*
 
+```
+assignableExpression:
+primary (arguments* assignableSelector)+ | 
+super assignableSelector |
+identifier
+;
 
+assignableSelector:
+‘[’ expression ‘]’ |
+ ‘.’ identifier |
+ ‘?.’ identifier 
+;
+```
+An assignable expression can be conditional or unconditional. 
+
+A conditional assignment expression of the form *e1?.identifier* is equivalent to the expression 
+`e1 == ` **null** `? ` **null** ` : e1.identifier`.
+
+An unconditional assignable expression is either:
+
+**Rest of section 16.31 is unchanged**
 
 ### A working implementation
 
