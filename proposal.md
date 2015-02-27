@@ -84,7 +84,7 @@ A conditional assignment of the form *v ?= e* is equivalent to the expression
 
 **Rest of section 16.19 is unchanged** 
 
-** ?? can either replace unaryExpression or logicalOrExpression. Assuming the latter.**
+**?? can either replace unaryExpression or logicalOrExpression. Assuming the latter.**
 
 #### 16.20 Conditional
 
