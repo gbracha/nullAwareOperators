@@ -132,7 +132,7 @@ assignableSelector:
 ```
 An assignable expression can be conditional or unconditional. 
 
-A conditional assignment expression of the form *e1?.identifier* is equivalent to the expression 
+A conditional assignable expression of the form *e1?.identifier* is equivalent to the expression 
 `e1 == ` **null** `? ` **null** ` : e1.identifier`.
 
 An unconditional assignable expression is either:
