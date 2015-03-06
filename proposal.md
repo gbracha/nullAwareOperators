@@ -47,12 +47,12 @@ https://code.google.com/p/dart/issues/detail?id=41
 ##Examples
 
 ```
-if ((stringMightBeNull ?? "").Length == 0) {
+if ((stringMightBeNull ?? "").length == 0) {
     // string is empty or null
 }
 ```
 
-`zip = lottery.?drawWinner().?address?.zipcode`
+`zip = lottery?.drawWinner()?.address?.zipcode`
 
 
 ## Proposal
