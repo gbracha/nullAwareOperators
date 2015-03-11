@@ -19,7 +19,7 @@ We propose the addition of the following operators:
 
 * The null-coalescing operator (aka ifNull) `??` where *a??b* is sugar for `a == ` **null**` ? b : a`.
 
-* `?=` where *v ?= e* is sugar for `v = v == ` **null** `? ` *e*  `: v`.
+* `??=` where *v ??= e* is sugar for `v = v == ` **null** `? ` *e*  `: v`.
 
 ##Motivation
 
@@ -77,11 +77,11 @@ An assignment changes the value associated with a mutable variable or property.
 ```
 assignmentOperator:
 ‘=’ | 
-‘?=’ | 
+‘??=’ | 
 compoundAssignmentOperator
 ;
 ```
-A conditional assignment of the form *v ?= e* is equivalent to the expression 
+A conditional assignment of the form *v ??= e* is equivalent to the expression 
 `v = v == ` **null** `? ` *e*  `: v`.
 
 **Rest of section 16.19 is unchanged** 
