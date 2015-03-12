@@ -19,7 +19,7 @@ We propose the addition of the following operators:
 
 * The null-coalescing operator (aka ifNull) `??` where *a??b* is sugar for `a == ` **null**` ? b : a`.
 
-* `??=` where *v ??= e* is sugar for `v = v == ` **null** `? ` *e*  `: v`.
+* `??=` where *v ??= e* is sugar for `v = v ?? ` *e*.
 
 ##Motivation
 
@@ -70,21 +70,29 @@ See above. The proposal is strictly limited to the above syntactic transforms.
 
 
 
-#### 16.19 Assignment
+#### 16.19.1 Compound Assignment
 
-An assignment changes the value associated with a mutable variable or property.
-
-```
-assignmentOperator:
-‘=’ | 
-‘??=’ | 
-compoundAssignmentOperator
+A compound assignment of the form *v op= e* is equivalent to *v=v op e*. A compound assignment of the form *C.v op= e* is equivalent to *C.v = C.v op e*. A compound assignment of the form *e1.v op = e2* is equivalent to `((x) => x.v = x.v op e2)(e1)` where *x* is a variable that is not used in *e2*. A compound assignment of the form *e1[e2] op= e3* is equivalent to `((a, i) => a[i] = a[i] op e3)(e1, e2)` where *a* and *i* are variables that are not used in *e3*.
 ;
-```
-A conditional assignment of the form *v ??= e* is equivalent to the expression 
-`v = v == ` **null** `? ` *e*  `: v`.
 
-**Rest of section 16.19 is unchanged** 
+
+```
+compoundAssignmentOperator:
+
+‘*=’ | 
+‘/=’ | 
+‘ ̃/=’ | 
+‘%=’ | 
+‘+=’ | 
+‘-=’ | 
+‘<<=’ | 
+‘>>=’ | 
+‘&=’ | 
+‘ˆ=’ | 
+‘|=’
+‘??=’
+;
+``` 
 
 **?? can either replace unaryExpression or logicalOrExpression. Assuming the latter.**
 
