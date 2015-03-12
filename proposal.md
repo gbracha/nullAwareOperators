@@ -25,7 +25,8 @@ We propose the addition of the following operators:
 
 See bugs:
 
-https://code.google.com/p/dart/issues/detail?id=41
+* https://code.google.com/p/dart/issues/detail?id=41
+* https://code.google.com/p/dart/issues/detail?id=1236
 
 
 
