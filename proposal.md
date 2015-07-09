@@ -8,7 +8,13 @@
 
 3. **https://github.com/gbracha/nullAwareOperators** 
 
+## Status
 
+This proposal was accepted by the DEP, and was included in the 3rd edition
+of the Dart language specification.
+
+**This document is out of date. Please refer to the official
+[Dart language specification](https://www.dartlang.org/docs/spec/).**
 
 ##Summary 
 
